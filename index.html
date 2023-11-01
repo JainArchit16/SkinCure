@@ -8,7 +8,7 @@
     <link rel="icon" href="./images/Logo-Small-Light.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
-<body>
+<body class="overflow-x-hidden">
         <div class="flex flex-col min-h-[100vh] min-w-[100vw] p-20">
             <div class="shadow-lg w-[100%] h-[100%] flex flex-col gap-4">
                 <nav class="bg-transparent rounded-md">
@@ -79,21 +79,33 @@
 
                       <div class="flex flex-col w-[90%] gap-4">
                         <p class="text-2xl">Get Quick <span class="font-semibold">Medical Results</span></p>
+                        <p class="text-md w-[60%] mb-2">Our innovative solution harnesses the power of AI to revolutionize skin disease detection and diagnosis.</p>
                         <form>
                             <div class="flex items-center space-x-6">
-                              <div class="shrink-0">
-                                <img id='preview_img' class="h-16 w-16 object-cover rounded-md" src="./images/Logo-Small-Light.png" alt="Current profile photo" />
+                              <div class="flex flex-col gap-3">
+                                <div class="shrink-0">
+  
+                                  <div class="h-[200px] w-[200px] border-[1px] border-gray-200 rounded-lg flex flex-col justify-center items-center shadow-lg" id="dummy" onclick="document.getElementById('file-input').click()">
+                                    <img src="https://icons-for-free.com/iconfiles/png/512/cloud+upload+file+storage+upload+icon-1320190558968694328.png" 
+                                    class="w-[50px] h-[50px]">
+                                  </div>
+                                  <img src="" class="h-[200px] w-[200px] border-[1px] hidden shadow-lg rounded-lg" id="preview_img">
+                                </div>
+                                <label class="block">
+                                  <span class="sr-only">Choose profile photo</span>
+                                  <input type="file" onchange="loadFile(event)" 
+                                  id="file-input"
+                                  class="block w-full text-sm text-slate-500
+                    
+                                    file:mr-4 file:py-2 file:px-4
+                                    file:rounded-full file:border-0
+                                    file:text-sm file:font-semibold
+                                    file:bg-violet-50 file:text-violet-700
+                                    hover:file:bg-violet-100
+                                  "/>
+                                </label>
+
                               </div>
-                              <label class="block">
-                                <span class="sr-only">Choose profile photo</span>
-                                <input type="file" onchange="loadFile(event)" class="block w-full text-sm text-slate-500
-                                  file:mr-4 file:py-2 file:px-4
-                                  file:rounded-full file:border-0
-                                  file:text-sm file:font-semibold
-                                  file:bg-violet-50 file:text-violet-700
-                                  hover:file:bg-violet-100
-                                "/>
-                              </label>
                             </div>
                             <button class="rounded-md bg-[#2bbf97] my-4 p-2 font-semibold text-white" type="submit">
                                 See Results
