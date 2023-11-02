@@ -7,9 +7,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="./images/Logo-Small-Light.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" href="style.css">
+  </head>
 <body class="overflow-x-hidden">
         <div class="flex flex-col min-h-[100vh] min-w-[100vw] p-20">
+
             <div class="shadow-lg w-[100%] h-[100%] flex flex-col gap-4">
                 <nav class="bg-transparent rounded-md">
                     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -80,7 +82,7 @@
                       <div class="flex flex-col w-[90%] gap-4">
                         <p class="text-2xl">Get Quick <span class="font-semibold">Medical Results</span></p>
                         <p class="text-md w-[60%] mb-2">Our innovative solution harnesses the power of AI to revolutionize skin disease detection and diagnosis.</p>
-                        <form>
+                        <form onsubmit="seeResults(event)">
                             <div class="flex items-center space-x-6">
                               <div class="flex flex-col gap-3">
                                 <div class="shrink-0">
@@ -107,10 +109,18 @@
 
                               </div>
                             </div>
-                            <button class="rounded-md bg-[#2bbf97] my-4 p-2 font-semibold text-white" type="submit">
+                            <button class="rounded-md bg-[#2bbf97] mt-4 p-2 font-semibold text-white" type="submit">
                                 See Results
                             </button>
                           </form>
+                          <span class="loader hidden" id="loader"></span>
+                          <div class="hidden flex flex-col gap-2 my-1 text-xl p-2 border-[2px] rounded-md w-[50%]" id="result-here">
+                            <span class="font-semibold">Your Skin Result Goes Here:- </span>
+                            <div id="result" class="text-xl">
+  
+                            </div>
+                          </div>
+
                           
                       </div>
 
@@ -122,6 +132,7 @@
                   </div>
             </div>
         </div>
+
 
         <div class="bg-white py-24 sm:py-32">
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -217,7 +228,8 @@
         </div>
         
 </body>
-<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="script.js" type="text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </html>
