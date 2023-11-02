@@ -17,3 +17,18 @@
       transform: rotate(360deg);
     }
   } 
+  #Result{
+    transition: all 0.5s;
+  }
+  #Result:hover{
+      background-color: #2980b9;
+      color: #e7e7e7;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      scale: 1.05;
+  }
+#lines{
+  margin-left: 500px;
+  margin-right: 250px;
+  /* margin-top: 2px; */
+  height: 50px;
+}

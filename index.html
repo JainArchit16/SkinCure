@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="style.css">
   </head>
 <body class="overflow-x-hidden">
+  
         <div class="flex flex-col min-h-[100vh] min-w-[100vw] p-20 bg-cover bg-center" style="background-image: url('./images/bg.jpg');">
-
             <div class="shadow-lg w-[100%] h-[100%] flex flex-col gap-4 bg-white rounded-lg">
                 <nav class="bg-transparent rounded-md">
                     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -27,6 +27,7 @@
                   
                               Menu open: "hidden", Menu closed: "block"
                             -->
+                            
                             <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
@@ -72,18 +73,16 @@
                         </div>
                       </div>
                     </div>
-                  
                     <!-- Mobile menu, show/hide based on menu state. -->
                     <div class="sm:hidden" id="mobile-menu">
                       <div class="space-y-1 px-2 pb-3 pt-2">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                         <a href="#" class="bg-[#2bbf97] text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
-                        <a href="#" class="text-gray-300 hover:bg-[#2bbf97] hover:text-white block rounded-md px-3 py-2 text-base font-medium">Doctors</a>
+                        <a href="#" class="text-gray-300 hover:bg-[#2bbf97] hover:text-white block rounded-md px-3 py-2 text-base font-medium" id="Doctors">Doctors</a>
                         
                       </div>
                     </div>
                   </nav>
-
                   <div class="flex flex-row gap-4 items-center justify-center w-[90%] mx-auto">
 
                       <div class="flex flex-col w-[90%] gap-4">
@@ -116,7 +115,8 @@
 
                               </div>
                             </div>
-                            <button class="rounded-md bg-[#2bbf97] mt-4 mb-3 p-2 font-semibold text-white" type="submit">
+                            
+                            <button class="rounded-md bg-[#2bbf97] mt-4 mb-3 p-2 font-semibold text-white" id="Result" type="submit">
                                 See Results
                             </button>
                           </form>
